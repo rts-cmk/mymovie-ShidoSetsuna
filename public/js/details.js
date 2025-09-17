@@ -119,7 +119,6 @@ function renderMovieDetails(movie) {
   const coverHtml = `
     <nav class="details-top-bar">
       <a href="javascript:history.back()" class="back-button">
-        <!-- You can use an SVG or an arrow character here -->
         &#x2190;
       </a>
       <label class="mode_toggle">
@@ -129,7 +128,6 @@ function renderMovieDetails(movie) {
     </nav>
 
     <div class="details-backdrop" style="background-image: url('https://image.tmdb.org/t/p/w1280${movie.backdrop_path}')">
-      <!-- Optional: Add a play button for a trailer -->
       <div class="play-button-wrapper">
         <div class="play-button"></div>
         <span>Play Trailer</span>
