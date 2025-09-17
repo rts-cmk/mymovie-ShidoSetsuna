@@ -1,0 +1,304 @@
+/* ALL OF INDEX.CSS REPLACE AS WE GO */
+
+header nav svg path {
+  fill: black;
+}
+
+#showing-container {
+  margin: auto;
+  display: flex;
+  gap: 15px;
+  transform: translateX(0px);
+}
+
+.movie-card {
+  text-align: left;
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 200px;
+}
+
+.movie-card img {
+  box-shadow: -1px 8px 24px rgba(0, 0, 0, 0.42);
+  border-radius: 8px;
+  width: 151px;
+  display: block;
+}
+
+.popular-card img {
+  width: 120px;
+}
+
+.length {
+  margin: 0;
+  display: flex;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 60px;
+  flex-grow: 1;
+}
+
+.info h2 {
+  font-size: 1rem;
+  margin: 8px 0 4px 0;
+}
+
+.scrolling-info h2 {
+  width: 100%;
+}
+
+.info,
+.popular-info {
+  width: 100%;
+  min-width: 0;
+}
+
+.popular-info h2 {
+  width: 80%;
+  margin: 0;
+}
+
+#popular-container {
+  margin-bottom: 100px;
+}
+
+/* Glow effect for scroll cards */
+.poster-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 180px;
+}
+
+.poster-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.poster-bg {
+  position: absolute;
+  top: 20px;
+  left: 4px;
+  z-index: 1;
+  filter: blur(34px) brightness(2.4) saturate(2.4);
+  transform: scale(0.7);
+  opacity: 0.6;
+}
+
+#cover {
+  position: absolute;
+  top: -10%;
+}
+
+.length svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.poster-main {
+  position: relative;
+  z-index: 2;
+  width: 95% !important;
+  height: 95% !important;
+}
+
+/* Remove default link styling for poster and title */
+.poster-link,
+.title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset any default margin/padding on main */
+main {
+  padding: 0;
+}
+
+#details-container {
+  position: relative;
+  margin-top: 28vh;
+  height: 100%;
+}
+
+/* Top bar for back button and toggle */
+.details-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  z-index: 11;
+  box-sizing: border-box;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.3) 70%,
+    transparent 100%
+  );
+  backdrop-filter: blur(10px);
+}
+
+.back-button {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The movie image that stays fixed */
+.details-backdrop {
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: fixed;
+}
+
+.play-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.play-button {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.play-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-left: 16px solid #333;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.overview {
+  color: #9c9c9c;
+}
+
+/* The white container that scrolls up */
+.details-content {
+  position: relative;
+  padding: 1.5rem;
+  background-color: #f4f4f4;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 5;
+  height: 100%;
+}
+
+.title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 12px;
+}
+
+.title-header h1 {
+  margin: 0;
+}
+
+.bookmark-icon {
+  font-size: 1.5rem;
+}
+
+.details-content .rating {
+  display: block;
+  margin: 0.5rem 0 1rem;
+  color: #9c9c9c;
+}
+
+/* 3-column grid for meta info */
+.details-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.details-meta-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-meta-grid span {
+  color: #9c9c9c;
+  font-size: 0.9rem;
+}
+
+.details-meta-grid strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+.details-content h2 {
+  margin-top: 2rem;
+}
+
+.cast-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 11px;
+  overflow: auto;
+}
+
+.cast-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cast-name {
+  margin: 0.5em 0;
+}

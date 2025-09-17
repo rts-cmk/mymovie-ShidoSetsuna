@@ -1,0 +1,33 @@
+body.dark-mode h1 {
+  color: #dbe3ff;
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #f4f4f4;
+}
+
+body.dark-mode header,
+body.dark-mode .area_header,
+body.dark-mode .info,
+body.dark-mode .popular-info {
+  background: #00000000;
+}
+
+body.dark-mode .movie-card,
+body.dark-mode .popular-card {
+  background: #000000;
+}
+
+body.dark-mode nav body.dark-mode .area_header button {
+  border-color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.737);
+}
+
+body.dark-mode header nav svg path {
+  fill: #dbe3ff;
+}
+
+body.dark-mode .length svg path {
+  fill: #dbe3ff;
+}
